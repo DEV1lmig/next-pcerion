@@ -2,6 +2,25 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+First install the dependencies
+**Please use pnpm, its faster and save disk space for your projects**
+by using a unique installation of each dependencies, pnpm saves cache and links that cache to the node module folder
+for every project, so it only uses one installation of the module(s) for the projects that its needed.
+
+Install pnpm:
+
+- On Windows using powershell, exec this command `iwr https://get.pnpm.io/install.ps1 -useb | iex`
+  You can also use corepack if you are using a node version v16.13 or greater.
+
+```
+corepack enable
+corepack prepare pnpm@latest --activate or pnpm@<version> if you are using a node version below v16.17.
+```
+
+Install dependencies:
+
+- Exec `pnpm install` and it will install everything for you
+
 First, run the development server:
 
 ```bash
