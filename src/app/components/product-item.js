@@ -2,12 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
 
-const imageStyle = {
-  borederRadius: '20%',
-  width: '300px',
-  height: '300px',
-  objectFit: 'cover'
-}
 
 export default function ProductItem ({ product }) {
   return (
@@ -17,9 +11,8 @@ export default function ProductItem ({ product }) {
           src={product.image}
           width={200}
           height={200}
-          style={imageStyle}
           alt={product.name}
-          className='rounded shadow'
+          className='rounded shadow items-center w-[100%] h-[300px]'
         />
       </Link>
 
