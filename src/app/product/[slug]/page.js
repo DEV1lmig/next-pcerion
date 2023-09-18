@@ -34,7 +34,7 @@ export default function ProductScreen ({ params }) {
             <li>Description: {product.description}</li>
           </ul>
         </div>
-        <div className='card p-5'>
+        <div className='card-body card-normal card-bordered p-5'>
           <div className='mb-2 flex justify-between'>
             <div>Price</div>
             <div>${product.price}</div>
