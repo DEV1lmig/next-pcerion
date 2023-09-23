@@ -1,5 +1,14 @@
-export default function Home() {
+import data from '@/utils/data'
+import ProductItem from './components/product-item'
+
+export default function Home () {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
-  );
+    <main className=''>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4'>
+        {data.product.map((product) => (
+          <ProductItem product={product} key={product.slug}>Products</ProductItem>
+        ))}
+      </div>
+    </main>
+  )
 }

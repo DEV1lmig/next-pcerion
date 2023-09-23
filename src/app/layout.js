@@ -1,18 +1,25 @@
-import Head from "next/head";
-import "./globals.css";
+import App from './components/app'
+import './globals.css'
+import { StoreProvider } from '@/utils/Store'
 
-export default function layout({ title }) {
+export const metadata = {
+  title: 'PCERION',
+  route: '/'
+}
+
+export default function RootLayout ({ children }) {
   return (
-    <>
-      <Head>
-        <title>{title ? title + "- PCERION" : "PCERION"}</title>
-        <meta name="description" content="PC ecommerce website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
-        <header>header</header>
-        <footer>footer</footer>
-      </div>
-    </>
-  );
+    <html>
+      <body>
+        <div className='flex flex-col justify-between min-h-screen'>
+          <StoreProvider>
+            <App>{children}</App>
+          </StoreProvider>
+          <footer className='flex h-10 justify-center items-center shadow-inner'>
+            <p>PCERION compañia anonima, nos reservamos los derechos de autor</p>
+          </footer>
+        </div>
+      </body>
+    </html>
+  )
 }
